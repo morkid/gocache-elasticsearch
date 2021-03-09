@@ -138,7 +138,7 @@ func (e elasticCache) Clear(key string) error {
 func (e elasticCache) ClearPrefix(keyPrefix string) error {
 	query := map[string]map[string]map[string]string{
 		"query": {
-			"prefix": {
+			"match_phrase_prefix": {
 				"key": keyPrefix,
 			},
 		},
