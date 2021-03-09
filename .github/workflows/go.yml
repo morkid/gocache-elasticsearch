@@ -26,7 +26,7 @@ jobs:
 
     - uses: nyaruka/elasticsearch-action@v1
       with:
-        elastic version: '6.8.13'
+        elastic version: '7.10.1'
 
     - name: Set up Go 1.x
       uses: actions/setup-go@v2

@@ -13,8 +13,8 @@ import (
 
 	"github.com/morkid/gocache"
 
-	"github.com/elastic/go-elasticsearch/v6"
-	"github.com/elastic/go-elasticsearch/v6/esapi"
+	"github.com/elastic/go-elasticsearch/v7"
+	"github.com/elastic/go-elasticsearch/v7/esapi"
 )
 
 // ElasticCacheConfig struct config

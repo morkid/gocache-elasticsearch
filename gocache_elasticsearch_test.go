@@ -4,8 +4,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/elastic/go-elasticsearch/v6"
-	cache "github.com/morkid/gocache-elasticsearch/v6"
+	"github.com/elastic/go-elasticsearch/v7"
+	cache "github.com/morkid/gocache-elasticsearch/v7"
 )
 
 func TestCache(t *testing.T) {
