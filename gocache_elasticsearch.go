@@ -13,8 +13,8 @@ import (
 
 	"github.com/morkid/gocache"
 
-	"github.com/elastic/go-elasticsearch/v5"
-	"github.com/elastic/go-elasticsearch/v5/esapi"
+	"github.com/elastic/go-elasticsearch/v6"
+	"github.com/elastic/go-elasticsearch/v6/esapi"
 )
 
 // ElasticCacheConfig struct config
@@ -86,11 +86,10 @@ func (e elasticCache) Set(key string, value string) error {
 	wg.Add(1)
 	go func(es *elasticsearch.Client, index string, data string) {
 		req := esapi.IndexRequest{
-			Index:        index,
-			DocumentID:   key,
-			DocumentType: "doc",
-			Body:         strings.NewReader(data),
-			Refresh:      "true",
+			Index:      index,
+			DocumentID: key,
+			Body:       strings.NewReader(data),
+			Refresh:    "true",
 		}
 		res, err := req.Do(context.Background(), es)
 		if nil != err {
@@ -191,6 +190,7 @@ func (e elasticCache) find(key string) (*documentObject, error) {
 		es.Search.WithContext(context.Background()),
 		es.Search.WithIndex(e.Index),
 		es.Search.WithBody(&search),
+		es.Search.WithTrackTotalHits(true),
 	)
 	if err != nil {
 		return nil, err

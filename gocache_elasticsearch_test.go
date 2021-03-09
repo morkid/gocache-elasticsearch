@@ -4,8 +4,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/elastic/go-elasticsearch/v5"
-	cache "github.com/morkid/gocache-elasticsearch/v5"
+	"github.com/elastic/go-elasticsearch/v6"
+	cache "github.com/morkid/gocache-elasticsearch/v6"
 )
 
 func TestCache(t *testing.T) {
@@ -51,6 +51,8 @@ func TestCache(t *testing.T) {
 		} else {
 			t.Log("cache with key foo was removed")
 		}
+	} else {
+		t.Error("invalid foo value")
 	}
 
 	if err := adapter.Set("hello", "world"); nil != err {

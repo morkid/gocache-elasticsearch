@@ -1,5 +1,5 @@
 before_install:
-  - curl https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-5.3.1.deb -o elasticsearch.deb
+  - curl https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-6.8.14.deb -o elasticsearch.deb
   - sudo dpkg -i --force-confnew elasticsearch.deb
   - sudo chown -R elasticsearch:elasticsearch /etc/default/elasticsearch
   - sudo service elasticsearch restart

@@ -1,17 +1,17 @@
 # cache elasticsearch adapter
-[![Go Reference](https://pkg.go.dev/badge/github.com/morkid/gocache-elasticsearch/v5.svg)](https://pkg.go.dev/github.com/morkid/gocache-elasticsearch/v5)
+[![Go Reference](https://pkg.go.dev/badge/github.com/morkid/gocache-elasticsearch/v6.svg)](https://pkg.go.dev/github.com/morkid/gocache-elasticsearch/v6)
 [![Go](https://github.com/morkid/gocache-elasticsearch/actions/workflows/go.yml/badge.svg)](https://github.com/morkid/gocache-elasticsearch/actions/workflows/go.yml)
 [![Build Status](https://travis-ci.com/morkid/gocache-elasticsearch.svg?branch=master)](https://travis-ci.com/morkid/gocache-elasticsearch)
-[![Go Report Card](https://goreportcard.com/badge/github.com/morkid/gocache-elasticsearch/v5)](https://goreportcard.com/report/github.com/morkid/gocache-elasticsearch/v5)
+[![Go Report Card](https://goreportcard.com/badge/github.com/morkid/gocache-elasticsearch/v6)](https://goreportcard.com/report/github.com/morkid/gocache-elasticsearch/v6)
 [![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/morkid/gocache-elasticsearch)](https://github.com/morkid/gocache-elasticsearch/releases)
 
 This library is created by implementing [gocache](https://github.com/morkid/gocache) 
-and require [elasticsearch](https://github.com/elastic/go-elasticsearch) v5.
+and require [elasticsearch](https://github.com/elastic/go-elasticsearch) v6.
 
 ## Installation
 
 ```bash
-go get -d github.com/morkid/gocache-elasticsearch/v5
+go get -d github.com/morkid/gocache-elasticsearch/v6
 ```
 
 Available versions:
@@ -27,8 +27,8 @@ package main
 import (
     "time"
     "fmt"
-    cache "github.com/morkid/gocache-elasticsearch/v5"
-    "github.com/elastic/go-elasticsearch/v5"
+    cache "github.com/morkid/gocache-elasticsearch/v6"
+    "github.com/elastic/go-elasticsearch/v6"
 )
 
 func latency() {
